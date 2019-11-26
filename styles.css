@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap');
 
+html {
+  background-color: #000;
+  scroll-behavior: smooth;
+}
+
 body, body * {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
   font-family: 'Roboto Condensed', sans-serif;
-}
-
-html {
-  background-color: #000;
 }
 
 body {
