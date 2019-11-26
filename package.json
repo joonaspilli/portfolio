@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "start": "browser-sync -ws"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "eslint": "^6.7.1"
+  }
+}
