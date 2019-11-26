@@ -161,6 +161,7 @@ i.small-shadow {
   border: 0;
   color: #eee;
   display: block;
+  font-size: 1rem;
   height: 2.75rem; /* 44px */
   position: sticky;
   top: 0;
