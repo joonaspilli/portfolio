@@ -173,14 +173,17 @@ i.small-shadow {
   background: linear-gradient(#666, #444);
 }
 
-.main-navigation[data-nav-open="true"] {
+.main-navigation {
   background: #333;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+.main-navigation[data-nav-open="true"] {
   max-height: calc(100vh - 2.75rem); /* 100vh - nav button height */
   overflow: auto;
-  padding: 1rem;
   position: sticky;
   top: 2.75rem; /* nav button height */
-  z-index: 1000;
 }
 
 .main-navigation__link {
@@ -364,7 +367,7 @@ i.small-shadow {
     max-width: 120rem; /* 1920px */
   }
 
-  .main-navigation[data-nav-open="true"] {
+  .main-navigation {
     margin: 0 auto;
     max-width: 64rem; /* 1024px */
     padding: 2rem;
