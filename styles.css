@@ -164,6 +164,7 @@ i.small-shadow {
   display: block;
   font-size: 1rem;
   height: 2.75rem; /* 44px */
+  position: relative; /* For IE */
   position: sticky;
   top: 0;
   width: 100%;
@@ -183,8 +184,14 @@ i.small-shadow {
 .main-navigation[data-nav-open="true"] {
   max-height: calc(100vh - 2.75rem); /* 100vh - nav button height */
   overflow: auto;
-  position: sticky;
-  top: 2.75rem; /* nav button height */
+  position: relative; /* For IE */
+}
+
+@supports (position: sticky) {
+  .main-navigation[data-nav-open="true"] {
+    position: sticky;
+    top: 2.75rem; /* nav button height */
+  }
 }
 
 .main-navigation__link {
@@ -208,7 +215,7 @@ i.small-shadow {
   background-color: #eee;
   background-image: url('./assets/img/background_light.png');
   display: block;
-  padding: 1rem;
+  padding: 3rem 1rem 1rem;
 }
 
 .portfolio-section {
@@ -219,7 +226,8 @@ i.small-shadow {
   color: #333;
   font-size: 2rem;
   font-weight: bold;
-  margin: 1em 0 1.5em;
+  margin: -5rem 0 1.5em;
+  padding: 5rem 0 0;
   text-align: center;
   text-decoration: underline;
 }
@@ -235,7 +243,8 @@ i.small-shadow {
 .portfolio-article__heading {
   color: #333;
   font-size: 1.5rem;
-  margin: 0 0 1.5rem;
+  margin: -6rem 0 1.5rem;
+  padding: 6rem 0 0;
 }
 
 .portfolio-article__project-type {
@@ -403,7 +412,6 @@ i.small-shadow {
   .portfolio-section__heading {
     flex: 0 1 75%;
     font-size: 2.5rem;
-    margin: 0 0 1.5em;
   }
 
   .portfolio-article {
