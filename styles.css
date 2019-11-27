@@ -277,8 +277,6 @@ i.small-shadow {
 .portfolio-article-links {
   bottom: 0;
   display: flex;
-  display: inline-block;
-  flex-wrap: wrap;
   justify-content: flex-end;
   padding: 1rem;
   position: absolute;
@@ -287,7 +285,17 @@ i.small-shadow {
 
 .portfolio-article-links__item {
   display: inline-block;
-  margin: 0 0 0 0.5rem;
+  margin: 0 0 0 1rem;
+  transition: transform 0.5s;
+}
+
+.portfolio-article-links__link {
+  display: inline-block;
+  transition: transform 0.5s;
+}
+
+.portfolio-article-links__link:hover, .portfolio-article-links__link:focus {
+  transform: scale(1.25);
 }
 
 .portfolio-article-links__icon {
@@ -298,7 +306,7 @@ i.small-shadow {
 .word-cloud {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 0 -0.5rem;
+  margin: 0 0 -0.5rem -0.5rem;
 }
 
 .word-cloud__item {
@@ -306,8 +314,7 @@ i.small-shadow {
   border-radius: 1px;
   color: #eee;
   display: inline-block;
-  display: inline-block;
-  margin: 0 0.5rem 0.5rem 0;
+  margin: 0 0 0.5rem 0.5rem;
   padding: 0.5em;
 }
 
