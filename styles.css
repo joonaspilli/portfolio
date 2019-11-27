@@ -137,7 +137,7 @@ i.small-shadow {
 
 .main-heading {
   align-items: center;
-  background-color: #ccc;
+  background-color: #000;
   background-image: url('./assets/img/hero_small.jpg');
   background-position: center;
   background-size: cover;
@@ -233,7 +233,6 @@ i.small-shadow {
   margin: -5rem 0 1.5em;
   padding: 5rem 0 0;
   text-align: center;
-  text-decoration: underline;
 }
 
 .portfolio-article {
