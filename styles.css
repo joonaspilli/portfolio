@@ -16,6 +16,10 @@ body {
   background-image: url('./assets/img/background_dark.png');
 }
 
+abbr {
+  text-decoration: none;
+}
+
 a, a * {
   color: #551a8b;
   font-weight: bold;
