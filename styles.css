@@ -289,7 +289,12 @@ i.small-shadow {
   transition: transform 0.5s;
 }
 
-.portfolio-article-links__item:hover {
+.portfolio-article-links__link {
+  display: inline-block;
+  transition: transform 0.5s;
+}
+
+.portfolio-article-links__link:hover, .portfolio-article-links__link:focus {
   transform: scale(1.25);
 }
 
