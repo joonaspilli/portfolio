@@ -1,8 +1,8 @@
 window.addEventListener('DOMContentLoaded', function() {
 
   const GLOBALS = {
-    NAVIGATION: {
-      HIDE_CSS_CLASS: 'vhidden'
+    ACCESSIBILITY: {
+      VISUALLY_HIDDEN_CSS: 'vhidden'
     }
   };
 
@@ -11,18 +11,18 @@ window.addEventListener('DOMContentLoaded', function() {
   };
 
   const displayNavigation = function(nav) {
-    nav.classList.remove(GLOBALS.NAVIGATION.HIDE_CSS_CLASS);
+    nav.classList.remove(GLOBALS.ACCESSIBILITY.VISUALLY_HIDDEN_CSS);
     nav.dataset.navOpen = true;
   };
 
   const hideNavigation = function(nav) {
-    nav.classList.add(GLOBALS.NAVIGATION.HIDE_CSS_CLASS);
+    nav.classList.add(GLOBALS.ACCESSIBILITY.VISUALLY_HIDDEN_CSS);
     nav.dataset.navOpen = false;
   };
 
   const toggleNavigation = function(nav) {
     nav.dataset.navOpen =
-      !nav.classList.toggle(GLOBALS.NAVIGATION.HIDE_CSS_CLASS);
+      !nav.classList.toggle(GLOBALS.ACCESSIBILITY.VISUALLY_HIDDEN_CSS);
   };
 
   const initNavigation = function(nav) {
@@ -65,7 +65,27 @@ window.addEventListener('DOMContentLoaded', function() {
       .forEach(initNavigationButtons);
   };
 
+  const processTitledElements = function() {
+    const elements = asArray(document.querySelectorAll('[title]'));
+    elements.forEach(function(el) {
+      const title = el.getAttribute('title');
+      if (title) {
+        const titleEl = document.createElement('span');
+        const vhidden = GLOBALS.ACCESSIBILITY.VISUALLY_HIDDEN_CSS;
+        titleEl.textContent = ' (' + title + ')';
+        titleEl.classList.add(vhidden);
+        el.appendChild(titleEl);
+        el.style.cursor = 'pointer';
+        el.setAttribute('tabindex', '-1');
+        el.addEventListener('click', function() {
+          titleEl.classList.toggle(vhidden);
+        });
+      }
+    });
+  };
+
   initializeNavigations();
+  processTitledElements();
 
 });
 
