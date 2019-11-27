@@ -65,23 +65,39 @@ window.addEventListener('DOMContentLoaded', function() {
       .forEach(initNavigationButtons);
   };
 
-  const processTitledElements = function() {
-    const elements = asArray(document.querySelectorAll('[title]'));
-    elements.forEach(function(el) {
-      const title = el.getAttribute('title');
-      if (title) {
-        const titleEl = document.createElement('span');
-        const vhidden = GLOBALS.ACCESSIBILITY.VISUALLY_HIDDEN_CSS;
-        titleEl.textContent = ' (' + title + ')';
-        titleEl.classList.add(vhidden);
-        el.appendChild(titleEl);
-        el.style.cursor = 'pointer';
-        el.setAttribute('tabindex', '-1');
-        el.addEventListener('click', function() {
-          titleEl.classList.toggle(vhidden);
-        });
+  const toggleTextContent = function(el, condition, a, b) {
+    if (condition) {
+      el.textContent = a;
+    } else {
+      el.textContent = b;
+    }
+    el.setAttribute('aria-pressed', condition);
+  };
+
+  const addToggleVisibleTitle = function(el) {
+    const title = el.getAttribute('title');
+    if (!title) {
+      return;
+    }
+    const original = el.textContent;
+    let display = false;
+    el.style.cursor = 'pointer';
+    el.setAttribute('tabindex', 0);
+    el.setAttribute('role', 'button');
+    el.setAttribute('aria-pressed', false);
+    el.addEventListener('click', function() {
+      toggleTextContent(el, display = !display, title, original);
+    });
+    el.addEventListener('keydown', function(event) {
+      if (event.code === 'Enter') {
+        toggleTextContent(el, display = !display, title, original);
       }
     });
+  };
+
+  const processTitledElements = function() {
+    asArray(document.querySelectorAll('[title]'))
+      .forEach(addToggleVisibleTitle);
   };
 
   initializeNavigations();
