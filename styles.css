@@ -135,6 +135,10 @@ i.small-shadow {
   width: 100%;
 }
 
+.main-header {
+  display: flex; /* IE fix */
+}
+
 .main-heading {
   align-items: center;
   background-color: #000;
@@ -144,6 +148,7 @@ i.small-shadow {
   color: #fff;
   display: flex;
   flex-direction: column;
+  flex: 1 1 auto; /* IE fix */
   font-size: 3rem;
   justify-content: center;
   min-height: 50vh;
