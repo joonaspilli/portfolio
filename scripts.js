@@ -111,8 +111,9 @@ window.addEventListener('DOMContentLoaded', function() {
   };
 
   initializeNavigations();
-  scrollToAnchor();
   processTitledElements();
+  // Timeout seems to be necessary to have this work reliably.
+  window.setTimeout(scrollToAnchor);
 
 });
 
