@@ -100,7 +100,18 @@ window.addEventListener('DOMContentLoaded', function() {
       .forEach(addToggleVisibleTitle);
   };
 
+  const scrollToAnchor = function() {
+    const hash = window.location.hash;
+    if (hash) {
+      const el = document.querySelector(hash);
+      if (el) {
+        el.scrollIntoView();
+      }
+    }
+  };
+
   initializeNavigations();
+  scrollToAnchor();
   processTitledElements();
 
 });
