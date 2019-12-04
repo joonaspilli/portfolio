@@ -368,7 +368,7 @@ i.small-shadow {
   color: #eee;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) { /* 768px */
 
   .main-heading {
     background-image: url('./assets/img/hero_large.jpg');
