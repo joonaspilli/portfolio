@@ -110,10 +110,27 @@ window.addEventListener('DOMContentLoaded', function() {
     }
   };
 
+  const printGreeting = function() {
+    console.log(
+      'Hello there!\n\n' +
+      'Since you\'re lurking here you may have noticed that my portfolio page',
+      'is all static content and its files lack minification and fancy newer',
+      'CSS and JavaScript features. This is because I\'ve kept the hosting and',
+      'updating process of my portfolio simple and easy. So don\'t be alarmed,',
+      'I\'m more than familiar with JavaScript\'s newest features, different',
+      'transpiling processes as well as modern web application development and',
+      'all the usual that comes with it.\n\n' +
+      'So I might be just the kind of geek you\'re looking for, send me a',
+      'message!\n\n' +
+      '- Joonas'
+    );
+  };
+
   initializeNavigations();
   processTitledElements();
   // Timeout seems to be necessary to have this work reliably.
   window.setTimeout(scrollToAnchor);
+  printGreeting();
 
 });
 
