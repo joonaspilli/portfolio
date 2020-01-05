@@ -126,11 +126,22 @@ window.addEventListener('DOMContentLoaded', function() {
     );
   };
 
+  const addTitle = function(el) {
+    if (!el.getAttribute('title')) {
+      el.setAttribute('title', el.textContent.trim());
+    }
+  };
+
+  const addTitles = function() {
+    asArray(document.querySelectorAll('[data-title]')).forEach(addTitle);
+  };
+
   initializeNavigations();
   processTitledElements();
+  addTitles();
+  printGreeting();
   // Timeout seems to be necessary to have this work reliably.
   window.setTimeout(scrollToAnchor);
-  printGreeting();
 
 });
 
