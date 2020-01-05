@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css');
 
+@keyframes loading-image {
+  from {
+    background-color: #ccc;
+  }
+  to {
+    background-color: #ddd;
+  }
+}
+
 html {
   background-color: #000;
   scroll-behavior: smooth;
@@ -267,6 +276,7 @@ i.small-shadow {
 }
 
 .portfolio-article__image {
+  animation: loading-image 1s linear infinite alternate;
   background-color: #ccc;
   background-position: center;
   background-size: cover;
@@ -350,6 +360,7 @@ i.small-shadow {
 }
 
 .contact__image {
+  animation: loading-image 1s linear infinite alternate;
   background-color: #ccc;
   background-position: top;
   background-size: cover;
