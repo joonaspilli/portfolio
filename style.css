@@ -2,7 +2,6 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css');
 
 html {
-    scroll-behavior: smooth;
     background: #eee;
     color: #333;
     -moz-osx-font-smoothing: grayscale;
@@ -53,6 +52,7 @@ h4 {
 }
 
 nav {
+    display: none;
     position: sticky;
     top: 0;
     background: #eee;
@@ -61,11 +61,12 @@ nav {
 
 nav li {
     display: inline-block;
-    margin: 1rem 1rem 1rem 0;
+    font-size: 0.8rem;
+    margin: 1em 1em 1em 0;
 }
 
 nav a {
-    color: #333;
+    color: #999;
     padding: 0.125em 0;
     border-bottom: 0.0625em solid transparent;
 }
@@ -75,7 +76,12 @@ a:focus {
 }
 
 nav a:hover, nav a:focus, nav a:active {
+    color: #333;
     border-bottom: 0.0625em solid #333;
+}
+
+nav a.in-view {
+    color: #333;
 }
 
 article a, article a * {
@@ -260,6 +266,10 @@ aside article.in-view footer ul {
 }
 
 @media (min-width: 48rem) { /* 768px */
+    nav {
+        display: block;
+    }
+
     article {
         display: flex;
         flex-wrap: wrap;
@@ -298,7 +308,7 @@ aside article.in-view footer ul {
 
 
     main > article footer {
-        flex: 0 0 60%;
+        flex: 0 0 100%;
     }
 
     main > article.in-view:nth-child(odd) footer ul {
