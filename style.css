@@ -84,19 +84,6 @@ nav a.in-view {
     color: #333;
 }
 
-article a, article a * {
-    color: #551a8b;
-}
-
-article a:hover,
-article a:hover *,
-article a:focus,
-article a:focus *,
-article a:active,
-article a:active * {
-    color: #f00;
-}
-
 nav li a {
     text-decoration: none;
     display: inline-block;
@@ -265,6 +252,37 @@ aside article.in-view footer ul {
     border-left: 4rem solid #333 !important;
 }
 
+article footer a {
+    display: block;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    position: relative;
+    height: 1.5rem;
+}
+
+article footer a i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all 0.6s cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+main > article:nth-child(odd) a {
+    color: #eee;
+}
+
+main > article:nth-child(even) a {
+    color: #333;
+}
+
+aside > article a {
+    color: #333;
+}
+
+article footer a:hover i, article footer a:focus i {
+    transform: scale(1.2);
+}
+
 @media (min-width: 48rem) { /* 768px */
     nav {
         display: block;
@@ -275,7 +293,7 @@ aside article.in-view footer ul {
         flex-wrap: wrap;
         justify-content: flex-start;
         align-items: flex-start;
-        align-content: center;
+        align-content: flex-end;
     }
 
     main > article {
@@ -306,9 +324,29 @@ aside article.in-view footer ul {
         padding-left: 1rem;
     }
 
-
-    main > article footer {
+    article footer {
         flex: 0 0 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+    }
+
+    article footer h3, article footer h4 {
+        flex: 0 0 100%;
+    }
+
+    article footer ul {
+        flex: 0 0 80%;
+    }
+
+    article footer a {
+        margin-top: 0;
+    }
+
+    main > article footer a {
+        font-size: 2rem;
     }
 
     main > article.in-view:nth-child(odd) footer ul {
@@ -328,7 +366,7 @@ aside article.in-view footer ul {
     aside {
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
+        align-items: stretch;
         align-content: center;
     }
 
