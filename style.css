@@ -38,38 +38,6 @@ h1 {
     font-size: 1.4rem;
 }
 
-@keyframes wave {
-    from {
-        transform: scaleX(-1) rotateZ(10deg);
-    }
-    to {
-        transform: scaleX(-1) rotateZ(-25deg);
-    }
-}
-
-.greeting {
-    margin-left: 0.4em;
-    display: inline-block;
-}
-
-.greeting__face {
-    position: relative;
-    top: 0.1em;
-    font-size: 2rem;
-    display: inline-block;
-    animation: 0.6s cubic-bezier(0.76, 0, 0.24, 1) infinite alternate-reverse wave;
-}
-
-.greeting__hand {
-    display: inline-block;
-    transform: scaleX(-1);
-    transform-origin: right bottom;
-    animation: 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6) infinite alternate wave;
-    position: relative;
-    top: 0.2em;
-    right: 1em;
-}
-
 h2 {
     font-size: 2.6rem;
 
