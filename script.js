@@ -163,14 +163,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
     initInView({
         selector: 'aside > article',
-        threshold: 50,
+        threshold: 20,
         onEnterView: handleArticleEnterView,
         onExitView: handleArticleExitView,
     });
 
     initInView({
         selector: 'aside > article',
-        threshold: 50,
+        threshold: 20,
         onEnterView: handleArticleNavLinkEnterView,
         onExitView: handleArticleNavLinkExitView,
     });

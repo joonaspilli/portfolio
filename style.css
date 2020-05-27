@@ -38,6 +38,38 @@ h1 {
     font-size: 1.4rem;
 }
 
+@keyframes wave {
+    from {
+        transform: scaleX(-1) rotateZ(10deg);
+    }
+    to {
+        transform: scaleX(-1) rotateZ(-25deg);
+    }
+}
+
+.greeting {
+    margin-left: 0.4em;
+    display: inline-block;
+}
+
+.greeting__face {
+    position: relative;
+    top: 0.1em;
+    font-size: 2rem;
+    display: inline-block;
+    animation: 0.6s cubic-bezier(0.76, 0, 0.24, 1) infinite alternate-reverse wave;
+}
+
+.greeting__hand {
+    display: inline-block;
+    transform: scaleX(-1);
+    transform-origin: right bottom;
+    animation: 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6) infinite alternate wave;
+    position: relative;
+    top: 0.2em;
+    right: 1em;
+}
+
 h2 {
     font-size: 2.6rem;
 
@@ -52,11 +84,7 @@ h4 {
 }
 
 nav {
-    display: none;
-    position: sticky;
-    top: 0;
     background: #eee;
-    z-index: 1;
 }
 
 nav li {
@@ -92,7 +120,7 @@ nav li a {
 
 main > article {
     padding: 1rem 0;
-    min-height: 80vh;
+    min-height: 100vh;
     position: relative;
     transition: all 0.6s cubic-bezier(0.5, 1, 0.89, 1);
 }
@@ -148,23 +176,29 @@ article figure {
     position: relative;
     margin: 2rem 0;
     background: #fff;
+    background-size: 125%;
     box-shadow:
-    0 1px 1px rgba(0,0,0,0.11),
-    0 2px 2px rgba(0,0,0,0.11),
-    0 4px 4px rgba(0,0,0,0.11),
-    0 6px 8px rgba(0,0,0,0.11),
-    0 8px 16px rgba(0,0,0,0.11);
+        0 1px 1px rgba(0,0,0,0.11),
+        0 2px 2px rgba(0,0,0,0.11),
+        0 4px 4px rgba(0,0,0,0.11),
+        0 6px 8px rgba(0,0,0,0.11),
+        0 8px 16px rgba(0,0,0,0.11);
+}
+
+article.in-view figure {
+    background-size: 100%;
 }
 
 article figure::after {
-    background: linear-gradient(
-    to left bottom,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0.75) 10%,
-    rgba(255, 255, 255, 0.25) 30%,
-    transparent 60%,
-    transparent 80%,
-    rgba(0, 0, 0, 0.15) 100%
+    background-size: inherit;
+    background-image: linear-gradient(
+        to left bottom,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0.75) 10%,
+        rgba(255, 255, 255, 0.25) 30%,
+        transparent 60%,
+        transparent 80%,
+        rgba(0, 0, 0, 0.15) 100%
     );
     content: "";
     height: 100%;
@@ -195,13 +229,6 @@ main > article footer {
     margin: 2rem 0;
 }
 
-article footer li {
-    display: inline;
-    margin: 1rem 0.5rem 1rem 0;
-    font-size: 0.8rem;
-    white-space: nowrap;
-}
-
 main > article .background {
     position: absolute;
     height: 100%;
@@ -221,11 +248,6 @@ main > article:nth-child(odd) .background {
 
 main > article:nth-child(even) .background {
     box-shadow: 0 0 10vw 10vw #eee inset;
-}
-
-article footer ul {
-    padding-left: 1rem;
-    transition: all 0.6s cubic-bezier(0.5, 1, 0.89, 1);
 }
 
 main > article:nth-child(odd) footer ul {
@@ -252,19 +274,40 @@ aside article.in-view footer ul {
     border-left: 4rem solid #333 !important;
 }
 
-article footer a {
-    display: block;
-    font-size: 1.5rem;
-    margin-top: 2rem;
-    position: relative;
-    height: 1.5rem;
+article footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: space-between;
 }
 
-article footer a i {
-    position: absolute;
-    top: 0;
-    right: 0;
+article footer h3, article footer h4 {
+    flex: 0 0 100%;
+}
+
+article footer ul {
+    flex: 0 0 100%;
+    padding-left: 1rem;
     transition: all 0.6s cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+article footer li {
+    display: inline;
+    margin-right: 0.5rem;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+article footer a {
+    display: inline-block;
+    font-size: 1.5rem;
+    margin: 2.6rem 1rem 0 1rem;
+    transition: all 0.6s cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+article footer a:hover, article footer a:focus {
+    transform: scale(1.2);
 }
 
 main > article:nth-child(odd) a {
@@ -279,13 +322,11 @@ aside > article a {
     color: #333;
 }
 
-article footer a:hover i, article footer a:focus i {
-    transform: scale(1.2);
-}
-
 @media (min-width: 48rem) { /* 768px */
     nav {
-        display: block;
+        position: sticky;
+        top: 0;
+        z-index: 1;
     }
 
     article {
@@ -293,7 +334,7 @@ article footer a:hover i, article footer a:focus i {
         flex-wrap: wrap;
         justify-content: flex-start;
         align-items: flex-start;
-        align-content: flex-end;
+        align-content: center;
     }
 
     main > article {
@@ -310,6 +351,7 @@ article footer a:hover i, article footer a:focus i {
 
     article figure, article p {
         flex: 0 0 50%;
+        margin: 1rem 0;
     }
 
     main > article figcaption {
@@ -326,11 +368,7 @@ article footer a:hover i, article footer a:focus i {
 
     article footer {
         flex: 0 0 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        align-content: center;
+        justify-content: flex-start;
     }
 
     article footer h3, article footer h4 {
@@ -338,15 +376,11 @@ article footer a:hover i, article footer a:focus i {
     }
 
     article footer ul {
-        flex: 0 0 80%;
+        flex: 1 1 auto;
     }
 
     article footer a {
-        margin-top: 0;
-    }
-
-    main > article footer a {
-        font-size: 2rem;
+        margin: 0 1rem 0 1rem;
     }
 
     main > article.in-view:nth-child(odd) footer ul {
@@ -366,8 +400,8 @@ article footer a:hover i, article footer a:focus i {
     aside {
         display: flex;
         flex-wrap: wrap;
-        align-items: stretch;
-        align-content: center;
+        align-items: flex-start;
+        align-content: flex-start;
     }
 
     aside article {
