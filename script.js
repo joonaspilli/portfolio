@@ -112,7 +112,7 @@ const initInView = ({
 
 window.addEventListener('DOMContentLoaded', () => {
     const navLinks = Array.prototype.slice.call(
-        document.querySelectorAll('nav a')
+        document.querySelectorAll('.main-nav__link')
     );
 
     const handleArticleEnterView = (element) => {
@@ -146,7 +146,7 @@ window.addEventListener('DOMContentLoaded', () => {
     };
 
     initInView({
-        selector: 'main > article',
+        selector: '.main-article',
         threshold: 20,
         ofViewport: true,
         onEnterView: handleArticleEnterView,
@@ -154,7 +154,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     initInView({
-        selector: 'main > article',
+        selector: '.main-article',
         threshold: 20,
         ofViewport: true,
         onEnterView: handleArticleNavLinkEnterView,
@@ -162,27 +162,27 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     initInView({
-        selector: 'aside > article',
+        selector: '.secondary-article',
         threshold: 20,
         onEnterView: handleArticleEnterView,
         onExitView: handleArticleExitView,
     });
 
     initInView({
-        selector: 'aside > article',
+        selector: '.secondary-article',
         threshold: 20,
         onEnterView: handleArticleNavLinkEnterView,
         onExitView: handleArticleNavLinkExitView,
     });
 
-    document.querySelectorAll('main > article').forEach((article) => {
+    document.querySelectorAll('.main-article').forEach((article) => {
         const img = article.querySelector('img');
 
         if (img) {
             const imgSrc = img.getAttribute('src');
             const bgElement = document.createElement('div');
             bgElement.style.backgroundImage = 'url(' + imgSrc + ')';
-            bgElement.classList.add('background');
+            bgElement.classList.add('main-article__background');
             article.appendChild(bgElement);
         }
     });

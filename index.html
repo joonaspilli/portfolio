@@ -8,227 +8,243 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <header>
-        <h1>
+    <header class="main-header">
+        <h1 class="main-header__heading">
             Portfolio &mdash; Joonas Pilli
         </h1>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#linear">Linear / Dixu</a></li>
-            <li><a href="#frantic">Frantic / Finnair</a></li>
-            <li><a href="#rush-knight">Rush Knight</a></li>
-            <li><a href="#accessible-spa">Accessible SPA</a></li>
-            <li><a href="#portfolio-v1">Portfolio 1.0</a></li>
-            <li><a href="#devious-tools">DeviousTools</a></li>
-            <li><a href="#vue-active-view">vue-active-view</a></li>
-            <li><a href="#bashed-lemon">Bashed Lemon</a></li>
+    <nav class="main-nav">
+        <ul class="main-nav__items">
+            <li class="main-nav__item">
+                <a href="#linear" class="main-nav__link">Linear / Dixu</a>
+            </li>
+            <li class="main-nav__item">
+                <a href="#frantic" class="main-nav__link">Frantic / Finnair</a>
+            </li>
+            <li class="main-nav__item">
+                <a href="#rush-knight" class="main-nav__link">Rush Knight</a>
+            </li>
+            <li class="main-nav__item">
+                <a href="#accessible-spa" class="main-nav__link">Accessible SPA</a>
+            </li>
+            <li class="main-nav__item">
+                <a href="#portfolio-v1" class="main-nav__link">Portfolio 1.0</a>
+            </li>
+            <li class="main-nav__item">
+                <a href="#devious-tools" class="main-nav__link">DeviousTools</a>
+            </li>
+            <li class="main-nav__item">
+                <a href="#vue-active-view" class="main-nav__link">vue-active-view</a>
+            </li>
+            <li class="main-nav__item">
+                <a href="#bashed-lemon" class="main-nav__link">Bashed Lemon</a>
+            </li>
         </ul>
     </nav>
 
-    <main>
-        <article id="linear">
-            <h2>Linear / Dixu</h2>
-            <figure>
-                <img src="./assets/img/dixu.png" alt="">
-                <figcaption>Screenshot of Dixu's renewed website</figcaption>
+    <main class="main-content">
+        <article id="linear" class="main-article">
+            <h2 class="main-article__heading">Linear / Dixu</h2>
+            <figure class="main-article__figure">
+                <img src="./assets/img/dixu.png" alt="" class="main-article__image">
+                <figcaption class="main-article__figure-caption">Screenshot of Dixu's renewed website</figcaption>
             </figure>
-            <p>
+            <p class="main-article__paragraph">
             Dolor blanditiis magnam vel deserunt porro unde, pariatur. Nulla impedit eos architecto mollitia cum, assumenda? Deserunt nulla dicta dignissimos tenetur suscipit suscipit. Obcaecati ratione debitis at voluptate esse? Sint debitis.
             Adipisicing repudiandae hic beatae quas nisi. Quidem quasi pariatur quis a numquam maxime eligendi. Animi iste culpa veniam esse quae distinctio debitis Quibusdam reprehenderit impedit quia harum accusamus quasi dignissimos.
             </p>
-            <footer>
-                <h3>Keywords &amp; Links</h3>
-                <ul>
-                    <li>Ant Design</li>
-                    <li>BEM</li>
-                    <li>CSS / SCSS</li>
-                    <li>HTML</li>
-                    <li>JavaScript</li>
-                    <li>Node.js</li>
-                    <li>PostgreSQL</li>
-                    <li>React</li>
-                    <li>Sails.js</li>
+            <footer class="main-article__footer">
+                <h3 class="main-article__footer-heading">Keywords &amp; Links</h3>
+                <ul class="main-article__footer-keywords">
+                    <li class="main-article__footer-keyword">Ant Design</li>
+                    <li class="main-article__footer-keyword">BEM</li>
+                    <li class="main-article__footer-keyword">CSS / SCSS</li>
+                    <li class="main-article__footer-keyword">HTML</li>
+                    <li class="main-article__footer-keyword">JavaScript</li>
+                    <li class="main-article__footer-keyword">Node.js</li>
+                    <li class="main-article__footer-keyword">PostgreSQL</li>
+                    <li class="main-article__footer-keyword">React</li>
+                    <li class="main-article__footer-keyword">Sails.js</li>
                 </ul>
-                <a href="https://www.finnair.com/fi/gb/offers/" target="_blank" rel="nofollow noopener">
+                <a href="https://www.finnair.com/fi/gb/offers/" target="_blank" rel="nofollow noopener" class="main-article__footer-link">
                     <i class="fas fa-external-link-alt" aria-label="Finnair's renewed flight offers page"></i>
                 </a>
-                <a href="https://www.finnair.com/fi/gb/offers/" target="_blank" rel="nofollow noopener">
+                <a href="https://www.finnair.com/fi/gb/offers/" target="_blank" rel="nofollow noopener" class="main-article__footer-link">
                     <i class="fas fa-external-link-alt" aria-label="Finnair's renewed flight offers page"></i>
                 </a>
             </footer>
         </article>
 
-        <article id="frantic">
-            <h2>Frantic / Finnair</h2>
-            <figure>
-                <img src="https://joonaspilli.github.io/portfolio/assets/img/finnair_offers.png" alt="">
-                <figcaption>Screenshot of Finnair's renewed flight offers page</figcaption>
+        <article id="frantic" class="main-article">
+            <h2 class="main-article__heading">Frantic / Finnair</h2>
+            <figure class="main-article__figure">
+                <img src="./assets/img/finnair_offers.png" alt="" class="main-article__image">
+                <figcaption class="main-article__figure-caption">Screenshot of Finnair's renewed flight offers page</figcaption>
             </figure>
-            <p>
-                While working as a Junior Developer at Frantic, I constructed several campaign landing pages for the Finland's largest airline Finnair as well as implemented several key features to Finnair's renewed flight offers page.
+            <p class="main-article__paragraph">
+                While working as a Junior Developer at <a href="#">Frantic</a>, I constructed several campaign landing pages for the Finland's largest airline <a href="#">Finnair</a> as well as implemented several key features to Finnair's renewed flight offers page.
             </p>
-            <footer>
-                <h3>Keywords &amp; Links</h3>
-                <ul>
-                    <li>A11Y</li>
-                    <li>Angular</li>
-                    <li>BEM</li>
-                    <li>CSS / SCSS</li>
-                    <li>FreeMarker</li>
-                    <li>Git</li>
-                    <li>HTML</li>
-                    <li>I18N</li>
-                    <li>JavaScript</li>
-                    <li>L11N</li>
-                    <li>Node.js</li>
-                    <li>React</li>
-                    <li>SEO</li>
-                    <li>TypeScript</li>
+            <footer class="main-article__footer">
+                <h3 class="main-article__footer-heading">Keywords &amp; Links</h3>
+                <ul class="main-article__footer-keywords">
+                    <li class="main-article__footer-keyword">A11Y</li>
+                    <li class="main-article__footer-keyword">Angular</li>
+                    <li class="main-article__footer-keyword">BEM</li>
+                    <li class="main-article__footer-keyword">CSS / SCSS</li>
+                    <li class="main-article__footer-keyword">FreeMarker</li>
+                    <li class="main-article__footer-keyword">Git</li>
+                    <li class="main-article__footer-keyword">HTML</li>
+                    <li class="main-article__footer-keyword">I18N</li>
+                    <li class="main-article__footer-keyword">JavaScript</li>
+                    <li class="main-article__footer-keyword">L11N</li>
+                    <li class="main-article__footer-keyword">Node.js</li>
+                    <li class="main-article__footer-keyword">React</li>
+                    <li class="main-article__footer-keyword">SEO</li>
+                    <li class="main-article__footer-keyword">TypeScript</li>
                 </ul>
-                <a href="https://www.finnair.com/fi/gb/offers/" target="_blank" rel="nofollow noopener">
+                <a href="https://www.finnair.com/fi/gb/offers/" target="_blank" rel="nofollow noopener" class="main-article__footer-link">
                     <i class="fas fa-eye" aria-label="Finnair's renewed flight offers page"></i>
                 </a>
             </footer>
         </article>
 
-        <article id="rush-knight">
-            <h2>Rush Knight</h2>
-            <figure>
-                <img src="https://joonaspilli.github.io/portfolio/assets/img/rush_knight.png" alt="">
-                <figcaption>Rush Knight</figcaption>
+        <article id="rush-knight" class="main-article">
+            <h2 class="main-article__heading">Rush Knight</h2>
+            <figure class="main-article__figure">
+                <img src="./assets/img/rush_knight.png" alt="" class="main-article__image">
+                <figcaption class="main-article__figure-caption">Rush Knight</figcaption>
             </figure>
-            <p>
+            <p class="main-article__paragraph">
             Dolor blanditiis magnam vel deserunt porro unde, pariatur. Nulla impedit eos architecto mollitia cum, assumenda? Deserunt nulla dicta dignissimos tenetur suscipit suscipit. Obcaecati ratione debitis at voluptate esse? Sint debitis.
             Adipisicing repudiandae hic beatae quas nisi. Quidem quasi pariatur quis a numquam maxime eligendi. Animi iste culpa veniam esse quae distinctio debitis Quibusdam reprehenderit impedit quia harum accusamus quasi dignissimos.
             </p>
-            <footer>
-                <h3>Keywords &amp; Links</h3>
-                <ul>
-                    <li>CSS</li>
-                    <li>Graphic Design</li>
-                    <li>HTML</li>
-                    <li>JavaScript</li>
-                    <li>Music &amp; SFX</li>
-                    <li>Phaser</li>
+            <footer class="main-article__footer">
+                <h3 class="main-article__footer-heading">Keywords &amp; Links</h3>
+                <ul class="main-article__footer-keywords">
+                    <li class="main-article__footer-keyword">CSS</li>
+                    <li class="main-article__footer-keyword">Graphic Design</li>
+                    <li class="main-article__footer-keyword">HTML</li>
+                    <li class="main-article__footer-keyword">JavaScript</li>
+                    <li class="main-article__footer-keyword">Music &amp; SFX</li>
+                    <li class="main-article__footer-keyword">Phaser</li>
                 </ul>
-                <a href="https://github.com/joonaspilli/thesis-accessible-spa" target="_blank" rel="nofollow noopener">
+                <a href="https://github.com/joonaspilli/thesis-accessible-spa" target="_blank" rel="nofollow noopener" class="main-article__footer-link">
                     <i class="fab fa-github" aria-hidden="true"></i>
                 </a>
             </footer>
         </article>
 
-        <article id="accessible-spa">
-            <h2>Accessible SPA</h2>
-            <figure>
-                <img src="https://joonaspilli.github.io/portfolio/assets/img/generic_angular.png" alt="">
-                <figcaption>Angular</figcaption>
+        <article id="accessible-spa" class="main-article">
+            <h2 class="main-article__heading">Accessible SPA</h2>
+            <figure class="main-article__figure">
+                <img src="./assets/img/generic_angular.png" alt="" class="main-article__image">
+                <figcaption class="main-article__figure-caption">Angular</figcaption>
             </figure>
-            <p>
+            <p class="main-article__paragraph">
             Dolor blanditiis magnam vel deserunt porro unde, pariatur. Nulla impedit eos architecto mollitia cum, assumenda? Deserunt nulla dicta dignissimos tenetur suscipit suscipit. Obcaecati ratione debitis at voluptate esse? Sint debitis.
             Adipisicing repudiandae hic beatae quas nisi. Quidem quasi pariatur quis a numquam maxime eligendi. Animi iste culpa veniam esse quae distinctio debitis Quibusdam reprehenderit impedit quia harum accusamus quasi dignissimos.
             </p>
-            <footer>
-                <h3>Keywords &amp; Links</h3>
-                <ul>
-                    <li>A11Y</li>
-                    <li>Angular</li>
-                    <li>CSS</li>
-                    <li>Git</li>
-                    <li>HTML</li>
-                    <li>TypeScript</li>
+            <footer class="main-article__footer">
+                <h3 class="main-article__footer-heading">Keywords &amp; Links</h3>
+                <ul class="main-article__footer-keywords">
+                    <li class="main-article__footer-keyword">A11Y</li>
+                    <li class="main-article__footer-keyword">Angular</li>
+                    <li class="main-article__footer-keyword">CSS</li>
+                    <li class="main-article__footer-keyword">Git</li>
+                    <li class="main-article__footer-keyword">HTML</li>
+                    <li class="main-article__footer-keyword">TypeScript</li>
                 </ul>
             </footer>
         </article>
 
-        <aside>
-            <article id="portfolio-v1">
-                <h3>Portfolio 1.0</h3>
-                <figure>
-                    <img src="./assets/img/portfolio_v1.png" alt="">
+        <section aria-label="Other projects" class="secondary-content">
+            <article id="portfolio-v1" class="secondary-article">
+                <h3 class="secondary-article__heading">Portfolio 1.0</h3>
+                <figure class="secondary-article__figure">
+                    <img src="./assets/img/portfolio_v1.png" alt="" class="secondary-article__image">
                 </figure>
-                <p>
+                <p class="secondary-article__paragraph">
                 Dolor blanditiis magnam vel deserunt porro unde, pariatur. Nulla impedit eos architecto mollitia cum, assumenda? Deserunt nulla dicta dignissimos tenetur suscipit suscipit.
                 </p>
-                <footer>
-                    <h4>Keywords &amp; Links</h4>
-                    <ul>
-                        <li>React</li>
-                        <li>Node.js</li>
-                        <li>Sails.js</li>
-                        <li>Ant Design</li>
-                        <li>BEM</li>
+                <footer class="secondary-article__footer">
+                    <h4 class="secondary-article__footer-heading">Keywords &amp; Links</h4>
+                    <ul class="secondary-article__footer-keywords">
+                        <li class="secondary-article__footer-keyword">React</li>
+                        <li class="secondary-article__footer-keyword">Node.js</li>
+                        <li class="secondary-article__footer-keyword">Sails.js</li>
+                        <li class="secondary-article__footer-keyword">Ant Design</li>
+                        <li class="secondary-article__footer-keyword">BEM</li>
                     </ul>
-                    <a href="https://www.finnair.com/fi/gb/offers/" target="_blank" rel="nofollow noopener">
+                    <a href="https://www.finnair.com/fi/gb/offers/" target="_blank" rel="nofollow noopener" class="secondary-article__footer-link">
                         <i class="fas fa-eye" aria-label="Finnair's renewed flight offers page"></i>
                     </a>
                 </footer>
             </article>
 
-            <article id="devious-tools">
-                <h3>DeviousTools</h3>
-                <figure>
-                    <img src="https://joonaspilli.github.io/portfolio/assets/img/devious_tools.png" alt="">
+            <article id="devious-tools" class="secondary-article">
+                <h3 class="secondary-article__heading">DeviousTools</h3>
+                <figure class="secondary-article__figure">
+                    <img src="./assets/img/devious_tools.png" alt="" class="secondary-article__image">
                 </figure>
-                <p>
+                <p class="secondary-article__paragraph">
                 Dolor blanditiis magnam vel deserunt porro unde, pariatur. Nulla impedit eos architecto mollitia cum, assumenda? Deserunt nulla dicta dignissimos tenetur suscipit suscipit. Obcaecati ratione debitis at voluptate esse? Sint debitis.
                 </p>
-                <footer>
-                    <h4>Keywords &amp; Links</h4>
-                    <ul>
-                        <li>React</li>
-                        <li>Node.js</li>
-                        <li>Sails.js</li>
-                        <li>Ant Design</li>
-                        <li>BEM</li>
+                <footer class="secondary-article__footer">
+                    <h4 class="secondary-article__footer-heading">Keywords &amp; Links</h4>
+                    <ul class="secondary-article__footer-keywords">
+                        <li class="secondary-article__footer-keyword">React</li>
+                        <li class="secondary-article__footer-keyword">Node.js</li>
+                        <li class="secondary-article__footer-keyword">Sails.js</li>
+                        <li class="secondary-article__footer-keyword">Ant Design</li>
+                        <li class="secondary-article__footer-keyword">BEM</li>
                     </ul>
-                    <a href="https://www.finnair.com/fi/gb/offers/" target="_blank" rel="nofollow noopener">
+                    <a href="https://www.finnair.com/fi/gb/offers/" target="_blank" rel="nofollow noopener" class="secondary-article__footer-link">
                         <i class="fas fa-eye" aria-label="Finnair's renewed flight offers page"></i>
                     </a>
                 </footer>
             </article>
 
-            <article id="vue-active-view">
-                <h3>vue-active-view</h3>
-                <figure>
-                    <img src="https://joonaspilli.github.io/portfolio/assets/img/generic_vue.png" alt="">
+            <article id="vue-active-view" class="secondary-article">
+                <h3 class="secondary-article__heading">vue-active-view</h3>
+                <figure class="secondary-article__figure">
+                    <img src="./assets/img/generic_vue.png" alt="" class="secondary-article__image">
                 </figure>
-                <p>
+                <p class="secondary-article__paragraph">
                 Dolor blanditiis magnam vel deserunt porro unde, pariatur. Nulla impedit eos architecto mollitia cum, assumenda? Deserunt nulla dicta dignissimos tenetur suscipit suscipit. Obcaecati ratione debitis at voluptate esse? Sint debitis.
                 </p>
-                <footer>
-                    <h4>Keywords &amp; Links</h4>
-                    <ul>
-                        <li>React</li>
-                        <li>Node.js</li>
-                        <li>Sails.js</li>
-                        <li>Ant Design</li>
-                        <li>BEM</li>
+                <footer class="secondary-article__footer">
+                    <h4 class="secondary-article__footer-heading">Keywords &amp; Links</h4>
+                    <ul class="secondary-article__footer-keywords">
+                        <li class="secondary-article__footer-keyword">React</li>
+                        <li class="secondary-article__footer-keyword">Node.js</li>
+                        <li class="secondary-article__footer-keyword">Sails.js</li>
+                        <li class="secondary-article__footer-keyword">Ant Design</li>
+                        <li class="secondary-article__footer-keyword">BEM</li>
                     </ul>
                 </footer>
             </article>
 
-            <article id="bashed-lemon">
-                <h3>Bashed Lemon</h3>
-                <figure>
-                    <img src="https://joonaspilli.github.io/portfolio/assets/img/generic_unix.jpg" alt="">
+            <article id="bashed-lemon" class="secondary-article">
+                <h3 class="secondary-article__heading">Bashed Lemon</h3>
+                <figure class="secondary-article__figure">
+                    <img src="./assets/img/generic_unix.jpg" alt="" class="secondary-article__image">
                 </figure>
-                <p>
+                <p class="secondary-article__paragraph">
                 Dolor blanditiis magnam vel deserunt porro unde, pariatur. Nulla impedit eos architecto mollitia cum, assumenda? Deserunt nulla dicta dignissimos tenetur suscipit suscipit. Obcaecati ratione debitis at voluptate esse? Sint debitis.
                 </p>
-                <footer>
-                    <h4>Keywords &amp; Links</h4>
-                    <ul>
-                        <li>React</li>
-                        <li>Node.js</li>
-                        <li>Sails.js</li>
-                        <li>Ant Design</li>
-                        <li>BEM</li>
+                <footer class="secondary-article__footer">
+                    <h4 class="secondary-article__footer-heading">Keywords &amp; Links</h4>
+                    <ul class="secondary-article__footer-keywords">
+                        <li class="secondary-article__footer-keyword">React</li>
+                        <li class="secondary-article__footer-keyword">Node.js</li>
+                        <li class="secondary-article__footer-keyword">Sails.js</li>
+                        <li class="secondary-article__footer-keyword">Ant Design</li>
+                        <li class="secondary-article__footer-keyword">BEM</li>
                     </ul>
                 </footer>
             </article>
-        </aside>
+        </section>
     </main>
 
     <script src="./script.js"></script>
