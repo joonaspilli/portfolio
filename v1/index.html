@@ -1,0 +1,380 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="Description" content="Portfolio of Joonas Pilli">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joonas Pilli - Portfolio</title>
+  <link rel="stylesheet" href="../reset.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <nav role="navigation" class="skip-navigation" aria-label="Skip">
+    <ul>
+      <li><a href="#nav" class="skip-navigation__link vhidden">Skip to main navigation</a></li>
+      <li><a href="#main" class="skip-navigation__link vhidden">Skip to main content</a></li>
+      <li><a href="#footer" class="skip-navigation__link vhidden">Skip to footer</a></li>
+    </ul>
+  </nav>
+  <header class="main-header">
+    <h1 id="main-heading" class="main-heading large-shadow">
+      <span class="vhidden">Portfolio of</span> Joonas Pilli
+      <span class="main-heading__subtitle">
+        <span class="vhidden"> - </span>
+        Web Developer
+      </span>
+    </h1>
+  </header>
+  <button class="main-navigation-button large-shadow" data-nav-toggle data-nav-target="#nav" aria-hidden="true">
+    Portfolio
+  </button>
+  <nav role="navigation" id="nav" class="main-navigation large-shadow" data-nav data-nav-open="false" aria-label="Main">
+    <ul>
+      <li>
+        <a href="#webdev" id="main-navigation-title-webdev" class="main-navigation__link main-navigation__link--section" data-nav-link>
+          Web Development
+        </a>
+        <ul aria-labelledby="main-navigation-title-webdev">
+          <li>
+            <a href="#frantic-finnair" class="main-navigation__link" data-nav-link>
+              Frantic / Finnair
+            </a>
+          </li>
+          <li>
+            <a href="#accessible-spa" class="main-navigation__link" data-nav-link>
+              Accessible SPA
+            </a>
+          </li>
+          <li>
+            <a href="#devious-tools" class="main-navigation__link" data-nav-link>
+              DeviousTools
+            </a>
+          </li>
+          <li>
+            <a href="#vue-active-view" class="main-navigation__link" data-nav-link>
+              vue-active-view
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#gamedev" id="main-navigation-title-gamedev" class="main-navigation__link main-navigation__link--section" data-nav-link>
+          Game Development
+        </a>
+        <ul aria-labelledby="main-navigation-title-gamedev">
+          <li>
+            <a href="#rush-knight" class="main-navigation__link" data-nav-link>
+              Rush Knight
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#other" id="main-navigation-title-other" class="main-navigation__link main-navigation__link--section" data-nav-link>
+          Other
+        </a>
+        <ul aria-labelledby="main-navigation-title-other">
+          <li>
+            <a href="#bashed-lemon" class="main-navigation__link" data-nav-link>
+              Bashed Lemon
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#contact" class="main-navigation__link main-navigation__link--section" data-nav-link>
+          Contact
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <main role="main" id="main" aria-labelledby="main-heading" class="main-content">
+    <section aria-labelledby="webdev" class="portfolio-section">
+      <h2 id="webdev" class="portfolio-section__heading">
+        Web Development
+      </h2>
+      <article aria-labelledby="frantic-finnair" aria-describedby="frantic-finnair-project-type" class="portfolio-article large-bevelled-shadow">
+        <header>
+          <h3 id="frantic-finnair" class="portfolio-article__heading">
+            Frantic / Finnair
+          </h3>
+          <span id="frantic-finnair-project-type" class="portfolio-article__project-type small-bevelled-shadow">Work <span class="vhidden">project</span></span>
+        </header>
+        <div
+          class="portfolio-article__image gradient-overlay small-shadow"
+          style="background-image: url('../assets/img/finnair_offers.png')"
+          role="img"
+          alt="A screenshot of Finnair's flight offers page">
+        </div>
+        <p class="portfolio-article__paragraph">
+          While working as a Junior Developer at <a href="https://www.frantic.com/" target="_blank" rel="nofollow noopener">Frantic</a>, I have constructed several campaign landing pages for the Finland's largest airline <a href="https://www.finnair.com/" target="_blank" rel="nofollow noopener">Finnair</a> as well as have implemented several key features to the Finnair's renewed <a href="https://www.finnair.com/fi/gb/offers/" target="_blank" rel="nofollow noopener">flight offers page</a>.
+        </p>
+        <footer role="contentinfo">
+          <ul class="word-cloud" aria-label="Related keywords">
+            <li class="word-cloud__item small-bevelled-shadow"><abbr title="Accessibility">A11Y</abbr></li>
+            <li class="word-cloud__item small-bevelled-shadow"><abbr title="Google Tag Manager">GTM</abbr></li>
+            <li class="word-cloud__item small-bevelled-shadow"><abbr title="Internatiolization">I18N</abbr></li>
+            <li class="word-cloud__item small-bevelled-shadow"><abbr title="Localization">L11N</abbr></li>
+            <li class="word-cloud__item small-bevelled-shadow"><abbr title="Search Engine Optimization">SEO</abbr></li>
+            <li class="word-cloud__item small-bevelled-shadow">Angular</li>
+            <li class="word-cloud__item small-bevelled-shadow">Git</li>
+            <li class="word-cloud__item small-bevelled-shadow">GitHub</li>
+            <li class="word-cloud__item small-bevelled-shadow">HTML</li>
+            <li class="word-cloud__item small-bevelled-shadow">JavaScript</li>
+            <li class="word-cloud__item small-bevelled-shadow">SCSS</li>
+            <li class="word-cloud__item small-bevelled-shadow">TypeScript</li>
+            <li class="word-cloud__item small-bevelled-shadow">Unit Testing</li>
+            <li class="word-cloud__item small-bevelled-shadow" title="Other relevant but confidential technologies and working methods">
+              + Confidential
+            </li>
+          </ul>
+          <ul class="portfolio-article-links" aria-label="Related links">
+            <li class="portfolio-article-links__item">
+              <a href="https://www.finnair.com/fi/gb/offers/" target="_blank" rel="nofollow noopener" class="portfolio-article-links__link" data-title>
+                <i class="fas fa-eye portfolio-article-links__icon small-shadow" aria-hidden="true"></i>
+                <span class="vhidden">Finnair's renewed flight offers page</span>
+              </a>
+            </li>
+            <li class="portfolio-article-links__item">
+              <a href="https://www.finnair.com/jp/gb/ricamaezawa" target="_blank" rel="nofollow noopener" class="portfolio-article-links__link" data-title>
+                <i class="fas fa-eye portfolio-article-links__icon small-shadow" aria-hidden="true"></i>
+                <span class="vhidden">An example of a landing page built by Joonas Pilli</span>
+              </a>
+            </li>
+          </ul>
+        </footer>
+      </article>
+      <article aria-labelledby="accessible-spa" aria-describedby="accessible-spa-project-type" class="portfolio-article large-bevelled-shadow">
+        <header>
+          <h3 id="accessible-spa" class="portfolio-article__heading">
+            Accessible SPA
+          </h3>
+          <span id="accessible-spa-project-type" class="portfolio-article__project-type small-bevelled-shadow">School <span class="vhidden">project</span></span>
+        </header>
+        <div
+          class="portfolio-article__image gradient-overlay small-shadow"
+          style="background-image: url('../assets/img/generic_angular.png')"
+          role="img"
+          alt="Logo of the web application framework Angular">
+        </div>
+        <p class="portfolio-article__paragraph">
+          An Angular based example of a single-page application with an emphasis on accessibility. This project was created for the purposes of my Bachelor's Degree thesis.
+        </p>
+        <footer role="contentinfo">
+          <ul class="word-cloud" aria-label="Related keywords">
+            <li class="word-cloud__item small-bevelled-shadow"><abbr title="Accessibility">A11Y</abbr></li>
+            <li class="word-cloud__item small-bevelled-shadow">Angular</li>
+            <li class="word-cloud__item small-bevelled-shadow">CSS</li>
+            <li class="word-cloud__item small-bevelled-shadow">Git</li>
+            <li class="word-cloud__item small-bevelled-shadow">GitHub</li>
+            <li class="word-cloud__item small-bevelled-shadow">HTML</li>
+            <li class="word-cloud__item small-bevelled-shadow">TypeScript</li>
+          </ul>
+          <ul class="portfolio-article-links" aria-label="Related links">
+            <li class="portfolio-article-links__item">
+              <a href="https://joonaspilli.github.io/thesis-accessible-spa/" target="_blank" rel="nofollow noopener" class="portfolio-article-links__link" data-title>
+                <i class="fas fa-eye portfolio-article-links__icon small-shadow" aria-hidden="true"></i>
+                <span class="vhidden">Accessible single-page application</span>
+              </a>
+            </li>
+            <li class="portfolio-article-links__item">
+              <a href="https://github.com/joonaspilli/thesis-accessible-spa" target="_blank" rel="nofollow noopener" class="portfolio-article-links__link" data-title>
+                <i class="fab fa-github portfolio-article-links__icon small-shadow" aria-hidden="true"></i>
+                <span class="vhidden">Project's source code</span>
+              </a>
+            </li>
+          </ul>
+        </footer>
+      </article>
+      <article aria-labelledby="devious-tools" aria-describedby="devious-tools-project-type" class="portfolio-article large-bevelled-shadow">
+        <header>
+          <h3 id="devious-tools" class="portfolio-article__heading">
+            DeviousTools
+          </h3>
+          <span id="devious-tools-project-type" class="portfolio-article__project-type small-bevelled-shadow">Personal <span class="vhidden">project</span></span>
+        </header>
+        <div
+          class="portfolio-article__image gradient-overlay small-shadow"
+          style="background-image: url('../assets/img/devious_tools.png')"
+          role="img"
+          alt="Logo of the Devious Tools project">
+        </div>
+        <p class="portfolio-article__paragraph">
+          A small and simple JavaScript utility function library. This project was created as a mean to explore the performance aspects of JavaScript and the limitations of cross-browser compatibility. This project is not maintained for now but I'm interested to work on something similar.
+        </p>
+        <footer role="contentinfo">
+          <ul class="word-cloud" aria-label="Related keywords">
+            <li class="word-cloud__item small-bevelled-shadow">Git</li>
+            <li class="word-cloud__item small-bevelled-shadow">GitHub</li>
+            <li class="word-cloud__item small-bevelled-shadow">JSDoc</li>
+            <li class="word-cloud__item small-bevelled-shadow">JavaScript</li>
+            <li class="word-cloud__item small-bevelled-shadow">Rollup</li>
+            <li class="word-cloud__item small-bevelled-shadow">npm</li>
+          </ul>
+          <ul class="portfolio-article-links" aria-label="Related links">
+            <li class="portfolio-article-links__item">
+              <a href="https://github.com/joonaspilli/devious-tools" target="_blank" rel="nofollow noopener" class="portfolio-article-links__link" data-title>
+                <i class="fab fa-github portfolio-article-links__icon small-shadow" aria-hidden="true"></i>
+                <span class="vhidden">Project's source code</span>
+              </a>
+            </li>
+          </ul>
+        </footer>
+      </article>
+      <article aria-labelledby="vue-active-view" aria-describedby="vue-active-view-project-type" class="portfolio-article large-bevelled-shadow">
+        <header>
+          <h3 id="vue-active-view" class="portfolio-article__heading">
+            vue-active-view
+          </h3>
+          <span id="vue-active-view-project-type" class="portfolio-article__project-type small-bevelled-shadow">Personal <span class="vhidden">project</span></span>
+        </header>
+        <div
+          class="portfolio-article__image gradient-overlay small-shadow"
+          style="background-image: url('../assets/img/generic_vue.png')"
+          role="img"
+          alt="Logo of the web application framework Vue.js">
+        </div>
+        <p class="portfolio-article__paragraph">
+          A custom Vue.js directive meant for the visual update of a website's navigation links based on scroll position. This project is no longer maintained.
+        </p>
+        <footer role="contentinfo">
+          <ul class="word-cloud" aria-label="Related keywords">
+            <li class="word-cloud__item small-bevelled-shadow">Git</li>
+            <li class="word-cloud__item small-bevelled-shadow">GitHub</li>
+            <li class="word-cloud__item small-bevelled-shadow">JSDoc</li>
+            <li class="word-cloud__item small-bevelled-shadow">JavaScript</li>
+            <li class="word-cloud__item small-bevelled-shadow">Vue.js</li>
+            <li class="word-cloud__item small-bevelled-shadow">npm</li>
+          </ul>
+          <ul class="portfolio-article-links" aria-label="Related links">
+            <li class="portfolio-article-links__item">
+              <a href="https://github.com/joonaspilli/vue-active-view" target="_blank" rel="nofollow noopener" class="portfolio-article-links__link" data-title>
+                <i class="fab fa-github portfolio-article-links__icon small-shadow" aria-hidden="true"></i>
+                <span class="vhidden">Project's source code</span>
+              </a>
+            </li>
+          </ul>
+        </footer>
+      </article>
+    </section>
+    <section aria-labelledby="gamedev" class="portfolio-section">
+      <h2 id="gamedev" class="portfolio-section__heading">
+        Game Development
+      </h2>
+      <article aria-labelledby="rush-knight" aria-describedby="rush-knight-project-type" class="portfolio-article large-bevelled-shadow">
+        <header>
+          <h3 id="rush-knight" class="portfolio-article__heading">
+            Rush Knight
+          </h3>
+          <span id="rush-knight-project-type" class="portfolio-article__project-type small-bevelled-shadow">School <span class="vhidden">project</span></span>
+        </header>
+        <div
+          class="portfolio-article__image gradient-overlay small-shadow"
+          style="background-image: url('../assets/img/rush_knight.png')"
+          role="img"
+          alt="Logo of the Rush Knight project">
+        </div>
+        <p class="portfolio-article__paragraph">
+          An HTML5 browser game created with the Phaser framework. This was the final project for a game development course as well as my first proper introduction to working with JavaScript.
+        </p>
+        <footer role="contentinfo">
+          <ul class="word-cloud" aria-label="Related keywords">
+            <li class="word-cloud__item small-bevelled-shadow">CSS</li>
+            <li class="word-cloud__item small-bevelled-shadow">Graphic Design</li>
+            <li class="word-cloud__item small-bevelled-shadow">HTML</li>
+            <li class="word-cloud__item small-bevelled-shadow">JavaScript</li>
+            <li class="word-cloud__item small-bevelled-shadow">Music &amp; SFX</li>
+            <li class="word-cloud__item small-bevelled-shadow">Phaser</li>
+          </ul>
+          <ul class="portfolio-article-links" aria-label="Related links">
+            <li class="portfolio-article-links__item">
+              <a href="https://joonaspilli.github.io/rush_knight" target="_blank" rel="nofollow noopener" class="portfolio-article-links__link" data-title>
+                <i class="fas fa-eye portfolio-article-links__icon small-shadow" aria-hidden="true"></i>
+                <span class="vhidden">Play Rush Knight in your browser</span>
+              </a>
+            </li>
+            <li class="portfolio-article-links__item">
+              <a href="https://github.com/joonaspilli/rush_knight" target="_blank" rel="nofollow noopener" class="portfolio-article-links__link" data-title>
+                <i class="fab fa-github portfolio-article-links__icon small-shadow" aria-hidden="true"></i>
+                <span class="vhidden">Project's source code</span>
+              </a>
+            </li>
+          </ul>
+        </footer>
+      </article>
+    </section>
+    <section aria-labelledby="other" aria-describedby="bashed-lemon-project-type" class="portfolio-section">
+      <h2 id="other" class="portfolio-section__heading">
+        Other
+      </h2>
+      <article aria-labelledby="bashed-lemon" class="portfolio-article large-bevelled-shadow">
+        <header>
+          <h3 id="bashed-lemon" class="portfolio-article__heading">
+            Bashed Lemon
+          </h3>
+          <span id="bashed-lemon-project-type" class="portfolio-article__project-type small-bevelled-shadow">Personal <span class="vhidden">project</span></span>
+        </header>
+        <div
+          class="portfolio-article__image gradient-overlay small-shadow"
+          style="background-image: url('../assets/img/generic_unix.jpg')"
+          role="img"
+          alt="A generic image from a Unix-like terminal">
+        </div>
+        <p class="portfolio-article__paragraph">
+          A Bash + <a href="https://github.com/LemonBoy/bar" target="_blank" rel="nofollow noopener">lemonbar</a> setup for printing useful information about system activity. This project was created as a mean to explore shell scripting.
+        </p>
+        <footer role="contentinfo">
+          <ul class="word-cloud" aria-label="Related keywords">
+            <li class="word-cloud__item small-bevelled-shadow">Bash</li>
+            <li class="word-cloud__item small-bevelled-shadow">Git</li>
+            <li class="word-cloud__item small-bevelled-shadow">GitHub</li>
+            <li class="word-cloud__item small-bevelled-shadow">Linux</li>
+            <li class="word-cloud__item small-bevelled-shadow">Unix</li>
+          </ul>
+          <ul class="portfolio-article-links" aria-label="Related links">
+            <li class="portfolio-article-links__item">
+              <a href="https://github.com/joonaspilli/bashed_lemon" target="_blank" rel="nofollow noopener" class="portfolio-article-links__link" data-title>
+                <i class="fab fa-github portfolio-article-links__icon small-shadow" aria-hidden="true"></i>
+                <span class="vhidden">Project's source code</span>
+              </a>
+            </li>
+          </ul>
+        </footer>
+      </article>
+    </section>
+  </main>
+  <footer role="contentinfo" id="footer" class="footer">
+    <section class="contact" aria-labelledby="contact">
+      <h2 id="contact" class="contact__heading">Contact</h2>
+      <div
+        class="contact__image  gradient-overlay small-shadow"
+        style="background-image: url('../assets/img/about.jpg')"
+        role="img"
+        alt="An image of Joonas Pilli">
+      </div>
+      <dl class="info">
+        <dt class="info__term">Email</dt>
+        <dd class="info__definition">
+          <a href="mailto:joonas_pilli@hotmail.com" class="info__link">
+            joonas_pilli@hotmail.com
+          </a>
+        </dd>
+        <dt class="info__term">LinkedIn</dt>
+        <dd class="info__definition">
+          <a href="https://www.linkedin.com/in/joonas-pilli/" target="_blank" rel="nofollow noopener" class="info__link">
+            linkedin.com/in/joonas-pilli
+          </a>
+        </dd>
+        <dt class="info__term">GitHub</dt>
+        <dd class="info__definition">
+          <a href="https://github.com/joonaspilli/" target="_blank" rel="nofollow noopener" class="info__link">
+            github.com/joonaspilli
+          </a>
+        </dd>
+      </dl>
+    </section>
+    <div class="footer__copyright">&copy; Joonas Pilli</div>
+  </footer>
+  <script src="./scripts.js"></script>
+</body>
+</html>

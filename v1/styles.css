@@ -23,7 +23,7 @@ body, body * {
 }
 
 body {
-  background-image: url('./assets/img/background_dark.png');
+  background-image: url('../assets/img/background_dark.png');
 }
 
 abbr {
@@ -152,7 +152,7 @@ i.small-shadow {
 .main-heading {
   align-items: center;
   background-color: #000;
-  background-image: url('./assets/img/hero_small.jpg');
+  background-image: url('../assets/img/hero_small.jpg');
   background-position: center;
   background-size: cover;
   color: #fff;
@@ -232,7 +232,7 @@ i.small-shadow {
     0 16px 8px rgba(0, 0, 0, 0.09),
     0 32px 16px rgba(0, 0, 0, 0.09);
   background-color: #eee;
-  background-image: url('./assets/img/background_light.png');
+  background-image: url('../assets/img/background_light.png');
   display: block;
   padding: 3rem 1rem 1rem;
 }
@@ -389,7 +389,7 @@ i.small-shadow {
 @media (min-width: 48rem) { /* 768px */
 
   .main-heading {
-    background-image: url('./assets/img/hero_large.jpg');
+    background-image: url('../assets/img/hero_large.jpg');
     font-size: 5rem;
     margin: 0 auto;
     max-width: 120rem; /* 1920px */
