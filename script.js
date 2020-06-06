@@ -116,29 +116,25 @@ window.addEventListener('DOMContentLoaded', () => {
     );
 
     const handleArticleEnterView = (element) => {
-        element.classList.add('in-view');
-    };
-
-    const handleArticleExitView = (element) => {
-        element.classList.remove('in-view');
-    };
-
-    const handleArticleNavLinkEnterView = (element) => {
         const id = element.getAttribute('id');
         const correspondingNavLink = navLinks.find(
             (link) => id === link.getAttribute('href').slice(1)
         );
+
+        element.classList.add('in-view');
 
         if (correspondingNavLink) {
             correspondingNavLink.classList.add('in-view');
         }
     };
 
-    const handleArticleNavLinkExitView = (element) => {
+    const handleArticleExitView = (element) => {
         const id = element.getAttribute('id');
         const correspondingNavLink = navLinks.find(
             (link) => id === link.getAttribute('href').slice(1)
         );
+
+        element.classList.remove('in-view');
 
         if (correspondingNavLink) {
             correspondingNavLink.classList.remove('in-view');
@@ -154,25 +150,10 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     initInView({
-        selector: '.main-article',
-        threshold: 20,
-        ofViewport: true,
-        onEnterView: handleArticleNavLinkEnterView,
-        onExitView: handleArticleNavLinkExitView,
-    });
-
-    initInView({
         selector: '.secondary-article',
         threshold: 20,
         onEnterView: handleArticleEnterView,
         onExitView: handleArticleExitView,
-    });
-
-    initInView({
-        selector: '.secondary-article',
-        threshold: 20,
-        onEnterView: handleArticleNavLinkEnterView,
-        onExitView: handleArticleNavLinkExitView,
     });
 
     document.querySelectorAll('.main-article').forEach((article) => {
@@ -181,7 +162,7 @@ window.addEventListener('DOMContentLoaded', () => {
         if (img) {
             const imgSrc = img.getAttribute('src');
             const bgElement = document.createElement('div');
-            bgElement.style.backgroundImage = 'url(' + imgSrc + ')';
+            bgElement.style.backgroundImage = `url(${imgSrc})`;
             bgElement.classList.add('main-article__background');
             article.appendChild(bgElement);
         }
