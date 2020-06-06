@@ -443,6 +443,18 @@ i {
     }
 }
 
+@media (min-width: 64rem) { /* 1024px */
+    .main-article {
+        padding: 2rem 0;
+    }
+}
+
+@media (min-width: 75rem) { /* 1200px */
+    .main-article {
+        padding: 4rem 0;
+    }
+}
+
 /* Secondary content */
 
 .secondary-content {
