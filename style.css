@@ -38,7 +38,6 @@ i {
 /* Main nav */
 
 .main-nav {
-    background: #eee;
     padding: 0 1rem;
     white-space: nowrap;
     overflow-y: auto;
@@ -46,6 +45,15 @@ i {
     position: sticky;
     top: 0;
     z-index: 1;
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    background-color: rgba(238, 238, 238, 0.8);
+}
+
+@-moz-document url-prefix() {
+    .main-nav {
+        background-color: #eee;
+    }
 }
 
 .main-nav-fade {
@@ -82,7 +90,9 @@ i {
     outline: none;
     text-decoration: none;
     display: inline-block;
-    transition: all 0.3s cubic-bezier(0.5, 1, 0.89, 1);
+    transition: color 0.3s cubic-bezier(0.5, 1, 0.89, 1),
+    border-bottom 0.3s cubic-bezier(0.5, 1, 0.89, 1),
+    margin 0.6s cubic-bezier(0.5, 1, 0.89, 1);
 }
 
 .main-nav__link:hover,
@@ -95,6 +105,15 @@ i {
 
 .main-nav__link.in-view {
     color: #333;
+    margin: 0 0.5em;
+}
+
+.main-nav__item:first-of-type .main-nav__link.in-view {
+    margin-left: 0;
+}
+
+.main-nav__item:last-of-type .main-nav__link.in-view {
+    margin-right: 0;
 }
 
 /* Main content */
