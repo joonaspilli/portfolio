@@ -7,14 +7,22 @@ const debounce = (callback, time) => {
     };
 };
 
-const getInViewElements = ({ elements = [], threshold = 20, ofViewport }) => {
+const getInViewElements = ({
+    elements = [],
+    threshold = 20,
+    ofViewport,
+    single,
+}) => {
     const { innerHeight } = window;
+    let inViewElements = [];
+    let index = elements.length;
 
-    return elements.reduce((acc, cur) => {
-        const { top, bottom } = cur.getBoundingClientRect();
+    while (index--) {
+        const currentEl = elements[index];
+        const { top, bottom } = currentEl.getBoundingClientRect();
 
         if (top > innerHeight || bottom < 0) {
-            return acc;
+            continue;
         }
 
         const elementHeight = bottom - top;
@@ -26,11 +34,15 @@ const getInViewElements = ({ elements = [], threshold = 20, ofViewport }) => {
             100;
 
         if (visiblePercentage > threshold) {
-            return [...acc, cur];
-        }
+            inViewElements = [...inViewElements, currentEl];
 
-        return acc;
-    }, []);
+            if (single) {
+                break;
+            }
+        }
+    }
+
+    return inViewElements;
 };
 
 const updateInView = ({
@@ -40,6 +52,7 @@ const updateInView = ({
     debounceTime = 0,
     threshold,
     ofViewport,
+    single,
 }) => {
     let currentInViewElements = [];
 
@@ -48,6 +61,7 @@ const updateInView = ({
             elements,
             threshold,
             ofViewport,
+            single,
         });
 
         const exitingElements = currentInViewElements.filter((element) => {
@@ -80,6 +94,7 @@ const initInView = ({
     resizeDebounceTime = 200,
     threshold,
     ofViewport,
+    single,
 }) => {
     const elements = Array.prototype.slice.call(
         document.querySelectorAll(selector)
@@ -94,6 +109,7 @@ const initInView = ({
             debounceTime: scrollDebounceTime,
             threshold,
             ofViewport,
+            single,
         })
     );
 
@@ -106,6 +122,7 @@ const initInView = ({
             debounceTime: resizeDebounceTime,
             threshold,
             ofViewport,
+            single,
         })
     );
 };
@@ -116,25 +133,29 @@ window.addEventListener('DOMContentLoaded', () => {
     );
 
     const handleArticleEnterView = (element) => {
+        element.classList.add('in-view');
+    };
+
+    const handleArticleExitView = (element) => {
+        element.classList.remove('in-view');
+    };
+
+    const handleLinkArticleEnterView = (element) => {
         const id = element.getAttribute('id');
         const correspondingNavLink = navLinks.find(
             (link) => id === link.getAttribute('href').slice(1)
         );
-
-        element.classList.add('in-view');
 
         if (correspondingNavLink) {
             correspondingNavLink.classList.add('in-view');
         }
     };
 
-    const handleArticleExitView = (element) => {
+    const handleLinkArticleExitView = (element) => {
         const id = element.getAttribute('id');
         const correspondingNavLink = navLinks.find(
             (link) => id === link.getAttribute('href').slice(1)
         );
-
-        element.classList.remove('in-view');
 
         if (correspondingNavLink) {
             correspondingNavLink.classList.remove('in-view');
@@ -150,11 +171,21 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     initInView({
-        selector: '.secondary-article',
-        threshold: 20,
-        onEnterView: handleArticleEnterView,
-        onExitView: handleArticleExitView,
+        selector: '.main-article',
+        threshold: 50,
+        ofViewport: true,
+        single: true,
+        onEnterView: handleLinkArticleEnterView,
+        onExitView: handleLinkArticleExitView,
     });
+
+    // initInView({
+    //     selector: '.secondary-article',
+    //     threshold: 20,
+    //     onEnterView: handleArticleEnterView,
+    //     onExitView: handleArticleExitView,
+    //     single: true,
+    // });
 
     document.querySelectorAll('.main-article').forEach((article) => {
         const img = article.querySelector('img');

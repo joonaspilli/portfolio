@@ -47,7 +47,7 @@ i {
     z-index: 1;
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
-    background-color: rgba(238, 238, 238, 0.8);
+    background-color: rgba(238, 238, 238, 0.7);
 }
 
 @-moz-document url-prefix() {
