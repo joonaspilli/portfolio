@@ -47,7 +47,7 @@ i {
     z-index: 1;
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
-    background-color: rgba(238, 238, 238, 0.7);
+    background-color: rgba(238, 238, 238, 0.8);
 }
 
 @-moz-document url-prefix() {
@@ -255,7 +255,7 @@ i {
 }
 
 .main-article__link {
-    display: inline-block;
+    display: inline;
     color: #333;
     text-decoration: none;
     border-bottom: 0.125em solid transparent;
@@ -352,8 +352,8 @@ i {
 }
 
 .main-article__footer-link-icon {
-    font-size: 1rem;
-    margin-right: 0.4em;
+    font-size: 0.8rem;
+    margin-left: 0.6em;
 }
 
 .main-article__footer-link-label {
